@@ -1,0 +1,23 @@
+x = int(input('Enter total no. of test cases '))
+input_string = input("Enter a list element separated by space ")
+list  = input_string.split()
+#split helps Get a list of numbers as input from the user in one line
+odd = []
+even =[]
+min_list = []
+count = 0
+for i in list:
+    if count % 2 == 0:
+        even.extend(i)
+#extend adding each element to the list and extending the list.
+    else:
+        odd.extend(i)
+    count += 1
+
+for i in range(0,len(odd)):
+    if odd[i] > even[i]:
+        min_list.extend(even[i])
+    else:
+        min_list.extend(odd[i])
+    i += 1 
+print ('{}'.format(min_list))
