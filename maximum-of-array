@@ -1,0 +1,6 @@
+values = input("enter numbers:").split(' ')
+vk = [int(x) for x in values] 
+#typecasting
+num = max(vk)
+num2 = min(vk)
+print ('{}\t{}'.format(num,num2))
