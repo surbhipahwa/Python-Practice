@@ -1,0 +1,24 @@
+n = int(input('Enter total no. of test cases '))
+roundlist = []
+while n != 0:
+    x, y = input("enter two numbers:").split(' ')
+    x=int(x)
+    y=int(y)
+    num = x/y 
+    num1 = num - int(num)
+    if (x > 0 and y > 0) or (x < 0 and y <0):
+        if num == 0:
+            roundlist.append(num)   
+        elif num1 <= 0.4 :
+            roundlist.append(int(num))
+        else:
+            roundlist.append(int(num) + 1)
+    elif ( (x>0 and y<0) or (x<0 and y>0) ):
+        if num == 0:
+            roundlist.append(num)   
+        elif num1 >= 0.4 :
+            roundlist.append(int(num))
+        else:
+            roundlist.append(int(num) - 1)       
+    n -= 1
+roundlist
