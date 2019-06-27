@@ -9,14 +9,14 @@ while n != 0:
     if (x > 0 and y > 0) or (x < 0 and y <0):
         if num == 0:
             roundlist.append(num)   
-        elif num1 <= 0.4 :
+        elif num1 <= 0.45 :
             roundlist.append(int(num))
         else:
             roundlist.append(int(num) + 1)
     elif ( (x>0 and y<0) or (x<0 and y>0) ):
         if num == 0:
             roundlist.append(num)   
-        elif num1 >= 0.4 :
+        elif num1 >= 0.45 :
             roundlist.append(int(num))
         else:
             roundlist.append(int(num) - 1)       
