@@ -1,0 +1,7 @@
+total = 0
+x = int(input('Enter total no.'))
+while (x>0):
+    n = int(input('Enter a number: '))
+    total+= n
+    x -= 1
+print(total)
