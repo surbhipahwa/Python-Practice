@@ -1,24 +1,26 @@
+import math
 n = int(input('Enter total no. of test cases '))
 roundlist = []
 while n != 0:
     x, y = input("enter two numbers:").split(' ')
     x=int(x)
     y=int(y)
-    num = x/y 
-    num1 = num - int(num)
-    if (x > 0 and y > 0) or (x < 0 and y <0):
-        if num == 0:
-            roundlist.append(num)   
-        elif num1 <= 0.45 :
-            roundlist.append(int(num))
+    num = x/y
+    frac,whole = math.modf(num)
+    if (x >0 and y>0) or ( x<0 and y<0):
+        if num == 1:
+            roundlist.append(int(whole))   
+        elif frac >= 0.5 :
+            roundlist.append(int(whole) + 1)
         else:
-            roundlist.append(int(num) + 1)
-    elif ( (x>0 and y<0) or (x<0 and y>0) ):
-        if num == 0:
-            roundlist.append(num)   
-        elif num1 >= 0.45 :
-            roundlist.append(int(num))
+            roundlist.append(int(whole))
+    elif (x >0 and y<0) or ( x<0 and y>0):
+        frac = -(frac)
+        if num == -1:
+            roundlist.append(int(whole))   
+        elif frac >= 0.5 :
+            roundlist.append(int(whole) - 1)
         else:
-            roundlist.append(int(num) - 1)       
+            roundlist.append(int(whole))   
     n -= 1
 roundlist
