@@ -1,0 +1,37 @@
+n = int(input('Enter total no. of test cases '))
+minlist = []
+while n != 0:
+    x, y, z = input("enter three numbers:").split(' ')
+    x=int(x)
+    y=int(y)
+    z=int(z)
+#split helps Get a list of numbers as input from the user in one line
+    if x > y:
+        if y > z:
+            minlist.append(z)
+        else:
+            minlist.append(y)
+    elif x < y:
+        if x < z:
+            minlist.append(x)
+        else:
+            minlist.append(z)
+    else:
+        minlist.append(x)
+    n -= 1
+minlist
+
+
+or
+
+n = int(input())
+
+total = []
+for i in range(n):
+  str_input = input()
+  num = [int(x) for x in str_input.split()]
+  total.append(min(num))
+
+for i in total:
+  print(i, end=" ")
+print()
