@@ -24,3 +24,19 @@ while n != 0:
             roundlist.append(int(whole))   
     n -= 1
 roundlist
+
+
+or 
+
+
+def round(r):
+    d = 1
+    if r%d>=d/2:
+        return r+(d-(r%d))
+    return r-(r%d)
+
+c = input()
+for _ in range(int(c)):
+    test = input().split()
+    test = [int(x) for x in test]
+    print(int(round(test[0]/test[1])),end=' ')
